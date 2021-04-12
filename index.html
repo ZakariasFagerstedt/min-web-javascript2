@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <title>Javascriptos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <div class="logo">
+          <img src="images/Pclogo.png" alt="" />
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">PC</a></li>
+            <li><a href="#">Gadgets</a></li>
+            <li><a href="#">Cart</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="Information">
+        <div class="overlay"></div>
+        <img src="images/Pclogo.png" class="PC" />
+        <div id="circle">
+          <div class="feature ett">
+            <img src="images/motherboard.png" alt="motherboard" />
+            <div>
+              <h1>Motherboard</h1>
+              <p>standard sizes</p>
+            </div>
+          </div>
+          <div class="feature två">
+            <img src="images/ram-memory.png" alt="ram-memory" />
+            <div>
+              <h1>RAM-Memory</h1>
+              <p>8gb, 16gb</p>
+            </div>
+          </div>
+          <div class="feature tre">
+            <img src="images/desktop.png" alt="desktop" />
+            <div>
+              <h1>Desktop</h1>
+              <p>standard sizes</p>
+            </div>
+          </div>
+          <div class="feature fyra">
+            <img src="images/processor.png" alt="" />
+            <div>
+              <h1>processor</h1>
+              <p>intel core i5</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <img src="images/arrow.png" id="upPil" />
+        <h3>Features</h3>
+        <img src="images/arrow.png" id="nerPil" />
+        <h2>
+          <div>
+            Icons made by
+            <a
+              href="https://www.flaticon.com/authors/smashicons"
+              title="Smashicons"
+              >Smashicons</a
+            >
+            from
+            <a href="https://www.flaticon.com/" title="Flaticon"
+              >www.flaticon.com</a
+            >
+          </div>
+        </h2>
+      </div>
+    </div>
+    <script>
+      var circle = document.getElementById("circle");
+      var upPil = document.getElementById("upPil");
+      var nerPil = document.getElementById("nerPil");
+
+      var rotateValue = circle.style.transform;
+      var rotateSum;
+
+      upPil.onclick = function () {
+        rotateSum = rotateValue + "rotate(-90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+      nerPil.onclick = function () {
+        rotateSum = rotateValue + "rotate(90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+    </script>
+  </body>
+</html>
